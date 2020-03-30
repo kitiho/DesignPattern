@@ -38,12 +38,11 @@ class MyPromise {
     this.failList = [];
     console.log(this);
     fn(
-      function() {
+      () => {
         // resolve函数
-        console.log(this);
         fsm.resolve(this);
       },
-      function() {
+      () => {
         // reject函数
         fsm.reject(this);
       }
